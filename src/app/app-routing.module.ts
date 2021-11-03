@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'recette',
+    loadChildren: () => import('./recette/recette.module').then( m => m.RecettePageModule)
+  },
+  {
+    path: 'pagemodale',
+    loadChildren: () => import('./pagemodale/pagemodale.module').then( m => m.PagemodalePageModule)
+  },
+  {
+    path: 'page-liens-utile',
+    loadChildren: () => import('./page-liens-utile/page-liens-utile.module').then( m => m.PageLiensUtilePageModule)
+  },
 ];
 
 @NgModule({
